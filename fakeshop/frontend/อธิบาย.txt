@@ -1,0 +1,13 @@
+ Library หน้าบ้าน
+
+        "antd": "^4.23.6", แต่ง layout iconสวยดี
+        "axios": "^1.1.3", ระบบ CRUD / API ใช้ต่อหน้าบ้าน-หลังบ้าน
+        "bootstrap": "^5.2.2", แต่ง layout สำหรับปรับขนาด
+        "moment": "^2.29.4", จัดการวันที่
+        "react-image-file-resizer": "^0.4.8", จัดการ image
+        "react-moment": "^1.1.2",  จัดการวันที่ล่าสุด
+        "react-redux": "^8.0.4", store เก็บข้อมูล
+        "react-router-dom": "^6.4.2", อัพเดท-เปลื่ยนหน้า เว็บเพจ
+        "react-toast": "^1.0.3", แจ้งเตือน Notity
+        "react-toastify": "^9.0.8",แจ้งเตือน Notity
+       "react-responsive-carousel": "^3.2.23", เลื่อนสินค้า

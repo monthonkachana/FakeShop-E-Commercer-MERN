@@ -1,0 +1,9 @@
+//@Endpoint  http://localhost:5000/api/admin/order-status
+
+//@Endpoint     http://localhost:5000/api/category
+
+//@Endpoint     http://localhost:5000/api/images
+
+//@Endpoint     http://localhost:5000/api/product
+
+//@Endpoint  http://localhost:5000/api/users
