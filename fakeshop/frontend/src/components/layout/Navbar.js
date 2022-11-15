@@ -1,12 +1,14 @@
 //navbar ไปทุกที่
 import React from "react";
-import { Menu } from "antd";
+import { Menu, Badge } from "antd";
 import FakeShop from "../img/FakeShop.png"
 import {
   // MailOutlined,
-  // AppstoreOutlined,
+  AppstoreOutlined,
   // SettingOutlined,
   //HomeOutlined,
+  ShoppingCartOutlined,
+  ShoppingOutlined,
   UserAddOutlined,
   LoginOutlined,
   LogoutOutlined,
@@ -16,13 +18,15 @@ import {
 // Router
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-
+import Search from "../card/Search";
+import Cart from "../pages/Cart";
 const Navbar = () => {
   const { SubMenu } = Menu;
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { user } = useSelector((state) => ({ ...state }));
+
+  const { user, cart } = useSelector((state) => ({ ...state }));
   console.log("user Navbar", user);
 
   const logout = () => {
@@ -36,12 +40,18 @@ const Navbar = () => {
     <Menu mode="horizontal">
       <Link to="/" >
         <div className="logo" >
-          <img src={FakeShop} alt="FakeShop" width="150"/>
+          <img src={FakeShop} alt="FakeShop" width="150" />
         </div>
       </Link>
-      {/* <Menu.Item key="home" icon={<HomeOutlined />}>
-        <Link to="/">Home</Link>
-      </Menu.Item> */}
+      <Menu.Item key="shop" icon={<ShoppingCartOutlined />}>
+        <Link to="/shop">Shop</Link>
+      </Menu.Item>
+      <Menu.Item key="cart" icon={<ShoppingOutlined />}>
+        <Link to="/cart">
+          <Badge count={cart.length} offset={[12, 0]}>Cart</Badge>
+
+        </Link>
+      </Menu.Item>
 
       {user && (
         <>
@@ -51,7 +61,32 @@ const Navbar = () => {
             key="SubMenu"
             icon={<DownOutlined />}
             title={user.username}
+
           >
+            {/*  condidtion login data admin/user */}
+            {
+              user.role == "admin" ? (
+                <Menu.Item
+                   icon={<AppstoreOutlined />}
+                  key="setting:5"
+                >
+                  <Link to="/admin/index">Data</Link>
+                </Menu.Item> //true
+              ) : (
+                <Menu.Item
+                   icon={<AppstoreOutlined />}
+                  key="setting:5"
+                >
+                  <Link to="/user/index">Data</Link>
+                </Menu.Item>
+              ) //false
+            }
+
+
+
+
+
+
             <Menu.Item
               icon={<LogoutOutlined />}
               key="setting:1" onClick={logout}>
@@ -62,8 +97,9 @@ const Navbar = () => {
         </>
       )}
 
+
       {!user && (
-        
+
         <>
           <Menu.Item
             key="mail"
@@ -83,6 +119,9 @@ const Navbar = () => {
           </Menu.Item>
         </>
       )}
+      <span className="p-1" style={{ float: "right" }}>
+        <Search />
+      </span>
     </Menu>
   );
 };

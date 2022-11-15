@@ -92,6 +92,7 @@ export const saveOrder = async (authtoken) => {
     }
   );
 };
+// Order <> History
 export const getOrders = async (authtoken) => {
   return await axios.get(process.env.REACT_APP_API + "/user/orders", {
     headers: {

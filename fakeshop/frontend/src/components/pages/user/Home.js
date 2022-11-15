@@ -1,10 +1,24 @@
 import React from "react";
+import MenubarUser from '../../layout/MenubarUser'
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home USER</h1>
+    <div className="container-fluid">
+    <div className="row">
+      <div className="col-md-2">
+        <MenubarUser />
+      </div>
+
+
+      <div className="col">
+        <div className="row">
+          <h1>Home User</h1>
+        </div>
+      </div>
+
+
     </div>
+  </div>
   );
 };
 

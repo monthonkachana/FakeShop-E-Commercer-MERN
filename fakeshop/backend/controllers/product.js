@@ -13,7 +13,7 @@ exports.create = async (req, res) => {
 
 exports.list = async (req, res) => {
   try {
-    //ปลงเปนตัวเลข parseInt
+    //แปลงเปนตัวเลข parseInt
     const count = parseInt(req.params.count);
 
     const product = await Product.find()
@@ -112,17 +112,17 @@ const handleCategory = async (req, res, category) => {
 
 exports.searchFilters = async (req, res) => {
   const { query,price,category } = req.body;
-
+  // ชื่อ text
   if (query) {
     console.log("query", query);
     await handleQuery(req, res, query);
   }
-  // price  [0,200]
+  // price  [0,200] ราคาสินค้า
   if (price !== undefined) {
     console.log("price---->", price);
     await handlePrice(req, res, price);
   }
-  //   [_id,_id]
+  //   [_id,_id] ค้นหาด้วยหมวดหมู้
   if (category) {
     console.log("category---->", category);
     await handleCategory(req, res, category);

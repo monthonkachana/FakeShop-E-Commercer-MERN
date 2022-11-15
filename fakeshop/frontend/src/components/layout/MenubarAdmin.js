@@ -23,6 +23,10 @@ const MenubarAdmin = () => {
           {/* <a href=""></a> */}
           <Link to="/admin/create-product"> เพิ่มสินค้า</Link>
         </li>
+        <li className="nav-item">
+          {/* <a href=""></a> */}
+          <Link to="/admin/orders"> จัดการออเดอร์</Link>
+        </li>
         
       </ul>
     </nav>

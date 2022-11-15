@@ -9,6 +9,15 @@ const {
   removeUsers,
   changeStatus,
   changeRole,
+  emptyCart,
+  userCart,
+  getUserCart,
+  saveAddress,
+  getOrder,
+  saveOrder,
+  addToWishList,
+  getWishList,
+  removeWishList
 } = require("../controllers/users");
 
 // middleware
@@ -43,5 +52,22 @@ router.post("/change-status", auth, adminCheck, changeStatus);
 //@Method    POST
 //@Access    Private
 router.post("/change-role", auth, adminCheck, changeRole);
+
+//@Endpoint  http://localhost:5000/api/user/cart
+//@Method    POST/GET
+//@Access    Private
+router.post("/user/cart", auth, userCart);
+router.get("/user/cart", auth, getUserCart);
+router.delete("/user/cart", auth, emptyCart);
+//address
+router.post("/user/address", auth, saveAddress);
+//order
+router.post("/user/order", auth, saveOrder);
+router.get("/user/orders", auth, getOrder);
+// wishlist
+router.post("/user/wishlist", auth, addToWishList);
+router.get("/user/wishlist", auth, getWishList);
+router.put("/user/wishlist/:productId", auth, removeWishList);
+
 
 module.exports = router;

@@ -1,4 +1,4 @@
-// ในcard Produst
+// แสดงตัวเดียว ในcard Produst
 import React from "react";
 import { Card,Tabs } from "antd";
 import { HeartOutlined, ShoppingCartOutlined } from "@ant-design/icons";
@@ -13,11 +13,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import _ from 'lodash'
 // function
 import { addToWishList } from '../functions/users'
-
+//แจ้งเตือน
 import { toast } from 'react-toastify'
 
 
-const { Meta } = Card;
+//const { Meta } = Card;
 const { TabPane } = Tabs;
 
 const SingleProductCard = ({ product }) => {
@@ -48,6 +48,7 @@ const SingleProductCard = ({ product }) => {
       payload:unique
     })
     dispatch({
+      //เรียกใช้ drawer app to cart
       type:'SET_VISIBLE',
       payload:true
     })
@@ -78,7 +79,9 @@ const SingleProductCard = ({ product }) => {
       <div className="col-md-7">
         <Carousel autoPlay showArrows={true} infiniteLoop>
           {images &&
-            images.map((item) => <img src={item.url} key={item.public_id} />)}
+            images.map((item) => 
+            <img src={item.url} key={item.public_id} />
+            )}
         </Carousel>
 
         <Tabs>
@@ -98,7 +101,7 @@ const SingleProductCard = ({ product }) => {
             <a onClick={handleAddToWishList}>
               <HeartOutlined className="text-info" />
               <br />
-              Add to favourite
+              Add to wishlist
             </a>,
 
             <>

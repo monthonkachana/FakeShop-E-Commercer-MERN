@@ -11,3 +11,32 @@
         "react-toast": "^1.0.3", แจ้งเตือน Notity
         "react-toastify": "^9.0.8",แจ้งเตือน Notity
        "react-responsive-carousel": "^3.2.23", เลื่อนสินค้า
+       "lodash": "^4.17.21", ัจดการ arry
+       "@react-pdf/renderer": "^3.0.1", จัดการเปนไฟล์ pdf
+              สำหรับ V18.2 ขึ้นไป *วิธีแก้1
+                                         *** --force เพราะเซิฟทับไฟลจาก Version เก่า
+       npm i @react-pdf/renderer --force ***
+       npm i jspdf --force
+       npm i jspdf-autotable --force
+       npm install "@david.kucsai/react-pdf-table" --force
+       npm install moment --force
+      
+*วิธีแก้2  stackoverflow
+import { Document, Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+
+// rename helper for react18 overload
+const MyDocument: any = Document
+const MyPage: any = Page
+
+// example code
+const PDF= () => (
+  <MyDocument>
+    <MyPage="A4" style={styles.page}>
+      <View style={styles.section}>
+        <Text>Section #1</Text>
+      </View>
+      <View style={styles.section}>
+        <Text>Section #2</Text>
+      </View>
+    </MyPage>
+  </MyDocument>

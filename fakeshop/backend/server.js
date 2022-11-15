@@ -16,10 +16,12 @@ app.use(bodyParser.json({limit:'20mb'}))
 app.use(cors())
 
 // Route
-// #1
-//app.use('/api', require('./routes/api'))
+// #test
+app.get('/tea',(req,res)=>{
+    res.send("fake shop coming")
+})
 
-// #2
+// READ
  readdirSync('./routes')
  .map((r)=> app.use('/api', require('./routes/'+r)))
 
