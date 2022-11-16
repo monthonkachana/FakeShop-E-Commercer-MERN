@@ -9,3 +9,13 @@
     "mongoose": "^6.6.7", ต่อmongo
     "morgan": "^1.10.0",จัดการ
     "nodemon": "^2.0.20"
+
+#database atles https://cloud.mongodb.com/v2/63734c9f05ece233a37b74a0#metrics/replicaSet/63734cbfb3ce38246c903dba/explorer/db_login/carts/find
+
+@maxmonthonkachana2@gmail.com mongodb
+user maxmonthon
+pass BpYxFYguxDTSpJio
+
+#heroku 
+@s6252410006
+https://dashboard.heroku.com/apps/server-ecommerce-fakeshop/settings

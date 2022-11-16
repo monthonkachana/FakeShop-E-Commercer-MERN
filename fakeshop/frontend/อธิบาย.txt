@@ -40,3 +40,11 @@ const PDF= () => (
       </View>
     </MyPage>
   </MyDocument>
+
+#netlify
+@s6252410006
+npm run bulid
+//setting 
+https://app.netlify.com/sites/fake-shop-max/settings/general
+///my app
+https://fake-shop-max.netlify.app/
