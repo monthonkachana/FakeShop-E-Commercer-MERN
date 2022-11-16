@@ -8,10 +8,11 @@ npm start
 https://fake-shop-max.netlify.app/
 
 ทดสอบ 
-  ADMIN
+ADMIN
+------------
 id:admin
 pass:admin
 -------------
-  USER
- id:maxxis
- pass:123456
+USER
+id:maxxis
+pass:123456
