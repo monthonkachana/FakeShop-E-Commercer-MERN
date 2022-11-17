@@ -30,12 +30,7 @@ PORT=5000
 DATABASE='mongodb://127.0.0.1/db_login'
 DATABASE_DEPLOY="mongodb+srv://maxmonthon:BpYxFYguxDTSpJio@cluster0.x6ywdjj.mongodb.net/db_login"
 
-# cloudinary.config({ 
-#   cloud_name: '', 
-#   api_key: '', 
-#   api_secret: '' 
-# });
-
 CLOUDINARY_CLOUD_NAME='dwamxjklh'
 CLOUDINARY_API_KEY='828365861741443'
 CLOUDINARY_API_SECRET='Mlaa2Bc_ILfipHt-EthNZqUqkAQ'
+
