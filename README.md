@@ -6,9 +6,8 @@ npm start
 -------------
 ตัวอย่าง
 https://fake-shop-max.netlify.app/
-
+-------------
 ทดสอบ ADMIN
-------------
 id:admin
 pass:admin
 
@@ -25,11 +24,9 @@ REACT_APP_API='https://server-ecommerce-fakeshop.herokuapp.com/api'
 backend env.
 
 PORT=5000
-
-# DATABASE='mongodb://localhost:27017/db_login'
+#DATABASE='mongodb://localhost:27017/db_login'
 DATABASE='mongodb://127.0.0.1/db_login'
 DATABASE_DEPLOY="mongodb+srv://maxmonthon:BpYxFYguxDTSpJio@cluster0.x6ywdjj.mongodb.net/db_login"
-
 CLOUDINARY_CLOUD_NAME='dwamxjklh'
 CLOUDINARY_API_KEY='828365861741443'
 CLOUDINARY_API_SECRET='Mlaa2Bc_ILfipHt-EthNZqUqkAQ'
