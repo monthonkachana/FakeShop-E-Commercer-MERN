@@ -20,7 +20,7 @@ pass:123456
 fronend env.
 #REACT_APP_API='http://localhost:5000/api'
 REACT_APP_API='https://server-ecommerce-fakeshop.herokuapp.com/api'
----------------------------------------------
+
 backend env.
 
 PORT=5000
