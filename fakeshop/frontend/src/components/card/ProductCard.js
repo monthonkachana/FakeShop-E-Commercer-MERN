@@ -4,9 +4,10 @@ import { Card } from "antd";
 import { EyeOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Link } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
-
+import { SearchOutlined ,createFromIconfontCN  } from '@ant-design/icons';
 // lodash
 import _ from 'lodash'
+import TextArea from "antd/lib/input/TextArea";
 
 const { Meta } = Card;
 
@@ -14,8 +15,9 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch()
   
 
-
-  const { _id, title, description, images } = product;
+  const MyIcon = createFromIconfontCN
+  
+  const { _id, title, description, images,price } = product;
   // console.log(product);
   const handleAddToCart = () => {
     let cart = []
@@ -64,9 +66,12 @@ const ProductCard = ({ product }) => {
           onClick={handleAddToCart}
           className="text-danger"
         />,
+        
       ]}
     >
-      <Meta title={title} description={description} />
+      <Meta title={title} description={description} style={{float:"left"}}  />
+      <Meta title={price} style={{float:"right" }} />
+      
     </Card>
   );
 };

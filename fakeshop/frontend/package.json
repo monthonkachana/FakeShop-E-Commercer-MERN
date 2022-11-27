@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@david.kucsai/react-pdf-table": "^0.4.1",
+    "@fortawesome/fontawesome-free": "^6.2.1",
     "@react-pdf/renderer": "^3.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -14,7 +15,9 @@
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.5.25",
     "lodash": "^4.17.21",
+    "mdb-react-ui-kit": "^5.0.0",
     "moment": "^2.29.4",
+    "moment-with-locales-es6": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-image-file-resizer": "^0.4.8",

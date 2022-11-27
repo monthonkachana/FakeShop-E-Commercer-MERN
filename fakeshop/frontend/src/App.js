@@ -8,7 +8,7 @@ import Shop from "./components/pages/Shop";
 import Cart from './components/pages/Cart'
 // Layout
 import Navbar from "./components/layout/Navbar";
-
+import Footer from './components/layout/Footer'
 // V.6
 import { Routes, Route } from "react-router-dom";
 
@@ -173,6 +173,7 @@ function App() {
 
 
       </Routes>
+      <Footer/>
     </div>
   );
 }

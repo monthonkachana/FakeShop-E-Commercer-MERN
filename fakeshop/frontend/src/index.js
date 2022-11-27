@@ -12,10 +12,13 @@ import rootReducer from "./components/reducers/index";
 import { BrowserRouter } from "react-router-dom";
 // Antd
 import 'antd/dist/antd.min.css';
-//import "antd/dist/antd-with-locales";
-//import "antd/dist/antd.less";
-//import "antd/dist/antd.css";
+// import "antd/dist/antd-with-locales";
+// import "antd/dist/antd.less";
+// import "antd/dist/antd.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+//MDB
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const store = createStore(rootReducer, composeWithDevTools());
 

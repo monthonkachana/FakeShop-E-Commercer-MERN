@@ -1,6 +1,7 @@
-// หน้าสั่งซื้อ product
+// หน้าสั่งซื้อ /checkout มีเวลาแต่งaddress
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import InputAddress from '../home/InputAddress'
 // function
 
 import {
@@ -70,17 +71,17 @@ const CheckOut = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-6">
-          <h4>Address</h4>
+          <h4>กรอกข้อมูลสั่งซื้อ</h4>
           <br />
-          text area
-          <ReactQuill value={address} onChange={setAddress} />
+          {/* <ReactQuill value={address} onChange={setAddress} /> */}
+          <InputAddress value={address} onChange={setAddress} />
           <button className="btn btn-primary m-2" onClick={handleSaveAddress}>
             Save Address
           </button>
-        </div>
+        </div>  
 
         <div className="col-md-6">
-          <h4>Order Summary </h4>
+          <h4>Order </h4>
           <hr />
           <p>
             Product <b>{products.length}</b>

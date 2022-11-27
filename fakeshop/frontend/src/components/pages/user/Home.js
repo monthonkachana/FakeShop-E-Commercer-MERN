@@ -12,7 +12,7 @@ const Home = () => {
 
       <div className="col">
         <div className="row">
-          <h1>Home User</h1>
+          <h1></h1>
         </div>
       </div>
 

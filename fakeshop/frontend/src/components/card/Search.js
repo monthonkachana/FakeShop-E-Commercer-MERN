@@ -2,7 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-
+import {SearchOutlined} from "@ant-design/icons";
 const Search = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,8 +23,9 @@ const Search = () => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input onChange={handleChange} type="search" className="form-control" />
+      <input onChange={handleChange} type="search" className="form-control"  placeholder="Type here to search" />
     </form>
+    
   );
 
   

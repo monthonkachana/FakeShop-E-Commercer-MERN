@@ -41,16 +41,20 @@ const WishList = () => {
 
         <div className="col">
           <div className="row">
-            <h1>WishList Page</h1>
+            <h1>สินค้าที่สนใจ</h1>
             {wishlist.map((item, index) =>
               <div key={index} className="alert alert-secondary">
-                <Link to={"/product/" + item._id}>
-                  {item.title}
+                <Link to={"/product/" + item._id}  >
+                <img src={item.images[0].url} width="80" />
+                </Link >
+                <Link to={"/product/" + item._id} style={{padding: '0 50px',margin: '0 30px', }} >
+                {item.title} 
                 </Link>
                 <span
                   onClick={() => handleRemove(item._id)}
-                  style={{ float: 'right' }}>ลบ</span>
+                  style={{ float: 'right' }}>X</span>
               </div>
+              
             )}
           </div>
         </div>

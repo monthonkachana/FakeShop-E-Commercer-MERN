@@ -19,7 +19,6 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Search from "../card/Search";
-import Cart from "../pages/Cart";
 const Navbar = () => {
   const { SubMenu } = Menu;
 
@@ -37,21 +36,24 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    <Menu mode="horizontal">
-      <Link to="/" >
-        <div className="logo" >
-          <img src={FakeShop} alt="FakeShop" width="150" />
-        </div>
-      </Link>
-      <Menu.Item key="shop" icon={<ShoppingCartOutlined />}>
+    <Menu mode="horizontal"  style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }} >
+      
+      <div style={{padding: '0 50px',margin: '0 60px', }} >
+        <Link to="/"  >       
+            <img src={FakeShop} alt="FakeShop" width="180" />         
+        </Link>
+      </div>
+      <Menu.Item key="shop" icon={<ShoppingCartOutlined />} >
         <Link to="/shop">Shop</Link>
       </Menu.Item>
       <Menu.Item key="cart" icon={<ShoppingOutlined />}>
-        <Link to="/cart">
-          <Badge count={cart.length} offset={[12, 0]}>Cart</Badge>
-
+        <Link to="/cart" >
+          <Badge count={cart.length} offset={[12, 0]} >Cart</Badge>
         </Link>
-      </Menu.Item>
+      </Menu.Item >
+      <span className="p-2" style={{padding: '0 50px',margin: '0 80px', }} >
+        <Search />
+      </span>
 
       {user && (
         <>
@@ -61,32 +63,25 @@ const Navbar = () => {
             key="SubMenu"
             icon={<DownOutlined />}
             title={user.username}
-
           >
             {/*  condidtion login data admin/user */}
             {
-              user.role == "admin" ? (
+              user.role == "admin" ? ( //true
                 <Menu.Item
-                   icon={<AppstoreOutlined />}
+                  icon={<AppstoreOutlined />}
                   key="setting:5"
                 >
                   <Link to="/admin/index">Data</Link>
-                </Menu.Item> //true
-              ) : (
+                </Menu.Item>
+              ) : (//false
                 <Menu.Item
-                   icon={<AppstoreOutlined />}
+                  icon={<AppstoreOutlined />}
                   key="setting:5"
                 >
                   <Link to="/user/index">Data</Link>
                 </Menu.Item>
-              ) //false
+              ) 
             }
-
-
-
-
-
-
             <Menu.Item
               icon={<LogoutOutlined />}
               key="setting:1" onClick={logout}>
@@ -119,9 +114,8 @@ const Navbar = () => {
           </Menu.Item>
         </>
       )}
-      <span className="p-1" style={{ float: "right" }}>
-        <Search />
-      </span>
+      
+      
     </Menu>
   );
 };

@@ -33,8 +33,8 @@ const Cart = () => {
   };
 
   const showCartItem = () => (
-    <table className="table table-bordered">
-      <thead className="thead-light">
+    <table className="table table-bordered ">
+      <thead className="thead-light bg-dark text-white">
         <tr>
           <td>รูป</td>
           <td>สินค้า</td>

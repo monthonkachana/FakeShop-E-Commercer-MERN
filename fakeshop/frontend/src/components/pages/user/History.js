@@ -29,17 +29,17 @@ const History = () => {
 
         <div className="col text-center">
           <div className="row">
-            <h1>ประวัติการ ซื้อ-ขาย</h1>
+            <h1>ประวัติการซื้อ</h1>
             {/* 1 Loop Order Card */}
             {orders.map((item, index) => {
               console.log("item", item);
               return (
                 <div key={index} className="card m-3">
-                  <p>Order {"   " + item.orderstatus}</p>
+                  <p >Order {"   " + item.orderstatus}</p>
                   {/* Table */}
-                  <table className="table table-bordered">
+                  <table className="table table-bordered ">
                     <thead>
-                      <tr>
+                      <tr className="bg-dark text-white">
                         <td>ชื่อสินค้า</td>
                         <td>ราคา</td>
                         <td>จำนวน</td>
