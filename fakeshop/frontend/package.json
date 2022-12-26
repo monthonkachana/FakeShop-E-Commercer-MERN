@@ -5,6 +5,7 @@
   "dependencies": {
     "@david.kucsai/react-pdf-table": "^0.4.1",
     "@fortawesome/fontawesome-free": "^6.2.1",
+    "@popperjs/core": "^2.11.6",
     "@react-pdf/renderer": "^3.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
